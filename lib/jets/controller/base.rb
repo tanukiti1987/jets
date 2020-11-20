@@ -106,6 +106,7 @@ class Jets::Controller
       Jets.logger.info "Started #{@event['httpMethod']} \"#{@event['path']}\" for #{ip} at #{Time.now}"
       Jets.logger.info "Processing #{self.class.name}##{@meth}"
       Jets.logger.info "  Event: #{event_log}"
+      binding.pry
       Jets.logger.info "  Parameters: #{JSON.dump(filtered_parameters.to_h)}"
     end
 
